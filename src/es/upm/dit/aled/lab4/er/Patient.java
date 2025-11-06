@@ -131,11 +131,11 @@ public class Patient extends Thread {
 	 */
 	private void advanceProtocol() {
 		// SOLUCION
-		Transfer transfer = protocol.get(indexProtocol);
-		indexProtocol++;
-		System.out.println("Patient " + this.number + " is moving from " + this.location + " to " + transfer.getTo());
-		EmergencyRoomGUI.getInstance().animateTransfer(this, transfer);
-		this.location = transfer.getTo();
+//		Transfer transfer = protocol.get(indexProtocol);
+//		indexProtocol++;
+//		System.out.println("Patient " + this.number + " is moving from " + this.location + " to " + transfer.getTo());
+//		EmergencyRoomGUI.getInstance().animateTransfer(this, transfer);
+//		this.location = transfer.getTo();
 		// SOLUCION
 	}
 
@@ -146,13 +146,13 @@ public class Patient extends Thread {
 	 */
 	private void attendedAtLocation() {
 		// SOLUCION
-		try {
-			System.out.println("Patient " + this.number + " is being attended at " + this.location);
-			sleep(this.location.getTime());
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-			Thread.currentThread().interrupt(); // Restore interrupted status
-		}
+//		try {
+//			System.out.println("Patient " + this.number + " is being attended at " + this.location);
+//			sleep(this.location.getTime());
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//			Thread.currentThread().interrupt(); // Restore interrupted status
+//		}
 		// SOLUCION
 	}
 
@@ -164,13 +164,13 @@ public class Patient extends Thread {
 	@Override
 	public void run() {
 		// SOLUCION
-		attendedAtLocation();
-		while (indexProtocol < protocol.size()) {
-			advanceProtocol();
-			attendedAtLocation();
-		}
-		EmergencyRoomGUI.getInstance().removePatient(this);
-		System.out.println("Patient " + this.number + " protocol finished at " + this.location);
+//		attendedAtLocation();
+//		while (indexProtocol < protocol.size()) {
+//			advanceProtocol();
+//			attendedAtLocation();
+//		}
+//		EmergencyRoomGUI.getInstance().removePatient(this);
+//		System.out.println("Patient " + this.number + " protocol finished at " + this.location);
 		// SOLUCION
 	}
 

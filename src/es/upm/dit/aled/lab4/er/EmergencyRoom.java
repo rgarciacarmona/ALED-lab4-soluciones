@@ -124,8 +124,8 @@ public class EmergencyRoom {
 	 */
 	public void admit(Patient patient) {
 		// SOLUCION
-		patient.start();
-		System.out.println("Patient " + patient.getNumber() + " has been admitted.");
+//		patient.start();
+//		System.out.println("Patient " + patient.getNumber() + " has been admitted.");
 		// SOLUCION
 	}
 
@@ -136,12 +136,12 @@ public class EmergencyRoom {
 	 */
 	public void waitForDischarge(Patient patient) {
 		// SOLUCION
-		try {
-			patient.join();
-			System.out.println("Patient " + patient.getNumber() + " has been discharged.");
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+//		try {
+//			patient.join();
+//			System.out.println("Patient " + patient.getNumber() + " has been discharged.");
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
 		// SOLUCION
 	}
 
